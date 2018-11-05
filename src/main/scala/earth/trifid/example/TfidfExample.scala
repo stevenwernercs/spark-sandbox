@@ -32,7 +32,8 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.ml.feature.MinHashLSH
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.col
+import org.apache.spark.sql.functions._
+
 
 object TfIdfExample {
 
@@ -110,7 +111,7 @@ object TfIdfExample {
         col("JaccardDistance"))
 
     //WANT, for each search provide sorted rank data id
-    results.orderBy("id-query", "JaccardDistance").show(false)
+    results.orderBy(asc("id-query"), asc("JaccardDistance")).show(false)
 
     // $example off$
 
