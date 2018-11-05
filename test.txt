@@ -1,1 +1,3 @@
 This is a file. It has some words. Some words are more frequent than others. Mostly this is a pretty flat wordcount since the file is so small.
+This is a different document
+A blue footed boobie is a dumb bird.
